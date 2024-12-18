@@ -3,8 +3,23 @@
 {% block content %}
 <div class="row">
     <div class="col">
-        <h2>Page Content</h2>
-        <p>Hi!</p>
+        <h2>Enter People</h2>
+        <form action="/process" method="post">
+            <label>Person 1</label>
+            <input type="text" name="p1" />
+            <br><br>
+            <label>Person 2</label>
+            <input type="text" name="p2" />
+            <br><br>
+            <label>Person 3</label>
+            <input type="text" name="p3" />
+            <br><br>
+            <input type="submit">
+        </form>
+    </div>
+    <div class="col">
+        <h2>List of People</h2>
+        {{peoples}}
     </div>
 </div>
 {% endblock %}
